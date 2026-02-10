@@ -1,0 +1,31 @@
+{
+  "name": "bch-1-hackcelerator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "node scripts/createEscrow.js",
+    "release": "node scripts/release_fixed.js",
+    "check": "node scripts/checkContract.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bitauth/libauth": "^3.1.0-next.8",
+    "bchaddrjs": "^0.5.2",
+    "bip32": "^5.0.0",
+    "bitcoincashjs-lib": "^3.3.3",
+    "bitcoinjs-lib": "^6.1.7",
+    "bs58check": "^4.0.0",
+    "cashscript": "^0.10.4",
+    "lucide-react": "^0.563.0",
+    "qrcode.react": "^4.2.0",
+    "tiny-secp256k1": "^2.2.4"
+  },
+  "devDependencies": {
+    "cashc": "^0.12.1"
+  }
+}

@@ -1,0 +1,29 @@
+pragma cashscript ^0.12.0;
+
+/*
+  AI Escrow Contract (BCH)
+  -----------------------
+  decision:
+    0 = HOLD
+    1 = RELEASE
+    2 = REFUND
+*/
+
+contract AIEscrow(
+    pubkey buyer,
+    pubkey seller,
+    int decision
+) {
+
+    // AI decides payment is safe
+    function release(sig sellerSig) {
+        require(decision == 1);
+        require(checkSig(sellerSig, seller));
+    }
+
+    // AI decides refund
+    function refund(sig buyerSig) {
+        require(decision == 2);
+        require(checkSig(buyerSig, buyer));
+    }
+}
